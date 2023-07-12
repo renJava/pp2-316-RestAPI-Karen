@@ -5,7 +5,7 @@ import org.example.entity.User;
 import org.example.service.UserService;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
-public class RunTestApi {
+public class MainRunTestApi {
     public static void main(String[] args) {
 
             AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(myConfig.class);
@@ -16,7 +16,7 @@ public class RunTestApi {
 
             userService.getAllUsers();
 
-            System.out.println(userService.newUser(newUser).getBody() + userService.editUser(editUser).getBody() + userService.deleteUser().getBody());
+            System.out.println("Результат: " + userService.newUser(newUser).getBody() + userService.editUser(editUser).getBody() + userService.deleteUser().getBody());
 
         }
 
