@@ -8,17 +8,18 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
 public class MainRunTestApi {
     public static void main(String[] args) {
 
-            AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(myConfig.class);
-            UserService userService = context.getBean("userService", UserService.class);
+        AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(myConfig.class);
+        UserService userService = context.getBean("userService", UserService.class);
 
-            User newUser = new User(3L, "James", "Brown", (byte) 33);
-            User editUser = new User(3L, "Thomas", "Shelby", (byte) 33);
+        User newUser = new User(3L, "James", "Brown", (byte) 33);
+        User editUser = new User(3L, "Thomas", "Shelby", (byte) 33);
 
-            userService.getAllUsers();
+        userService.getAllUsers();
 
-            System.out.println("Результат: " + userService.newUser(newUser).getBody() + userService.editUser(editUser).getBody() + userService.deleteUser().getBody());
-
-        }
+        System.out.println("Результат: " + userService.newUser(newUser).getBody() +
+                userService.editUser(editUser).getBody() + userService.deleteUser().getBody());
 
     }
+
+}
 
