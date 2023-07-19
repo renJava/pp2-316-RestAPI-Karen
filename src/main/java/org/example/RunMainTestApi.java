@@ -5,7 +5,7 @@ import org.example.entity.User;
 import org.example.service.UserService;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
-public class MainRunTestApi {
+public class RunMainTestApi {
     public static void main(String[] args) {
 
         AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(myConfig.class);
